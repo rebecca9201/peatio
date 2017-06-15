@@ -1,5 +1,6 @@
 module Private
   class FundSourcesController < BaseController
+    skip_before_filter :verify_authenticity_token
 
     def create
       new_fund_source = current_user.fund_sources.new fund_source_params
