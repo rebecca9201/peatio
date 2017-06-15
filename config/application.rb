@@ -45,5 +45,7 @@ module Peatio
 
     # Observer configuration
     config.active_record.observers = :transfer_observer
+
+    config.active_record.raise_in_transactional_callbacks = true
   end
 end
