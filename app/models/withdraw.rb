@@ -12,6 +12,7 @@ class Withdraw < ActiveRecord::Base
   has_paper_trail on: [:update, :destroy]
 
   enumerize :aasm_state, in: STATES, scope: true
+  attr_accessor :fund_source_id
 
   belongs_to :member
   belongs_to :account
